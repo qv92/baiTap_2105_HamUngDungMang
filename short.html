@@ -24,16 +24,16 @@
     }
     function sapXep(arr, doiChieu = soSanh) {
         const { length } = arr;
-        let minIndex;
+        let index;
         for (let i = 0; i < length - 1; i++) {
-            minIndex = i;
+            index = i;
             for (let j = i; j < length; j++) {
-                if (doiChieu(arr[minIndex], arr[j]) === ss.lonHon) {
-                    minIndex = j;
+                if (doiChieu(arr[index], arr[j]) === ss.lonHon) {
+                    index = j;
                 }
             }
-            if (i !== minIndex) {
-                swap(arr, i, minIndex);
+            if (i !== index) {
+                swap(arr, i, index);
             }
         }
         return arr;
