@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function swap(arr, a, b) {
+        let temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
+    const ss = {
+        nhoHon: -1,
+        lonHon: 1
+    };
+
+    function soSanh(a, b) {
+        if (a === b) {
+            return 0;
+        }
+        return a < b ? ss.nhoHon : ss.lonHon;
+    }
+    function sapXep(arr, doiChieu = soSanh) {
+        const { length } = arr;
+        let minIndex;
+        for (let i = 0; i < length - 1; i++) {
+            minIndex = i;
+            for (let j = i; j < length; j++) {
+                if (doiChieu(arr[minIndex], arr[j]) === ss.lonHon) {
+                    minIndex = j;
+                }
+            }
+            if (i !== minIndex) {
+                swap(arr, i, minIndex);
+            }
+        }
+        return arr;
+    }
+    let arr=[5,3,4,1,6,8,1,3,4];
+    document.write(sapXep(arr))
+</script>
+</body>
+</html>
