@@ -1,3 +1,36 @@
+//Cach 1:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function sapXep(a){
+    for (let i = 0; i < a.length-1; i++) {
+        for ( let j=i+1;j<a.length;j++){
+        if (a[i]>a[j]){
+            let temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+        }
+        }
+    }
+    return a
+    }
+    let arr1=[-1,5,3,-1,4];
+    document.write(sapXep(arr1))
+    //document.write(min(arr))
+</script>
+</body>
+</html>
+
+
+
+
+//cach 2 : kho hieu vl
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
