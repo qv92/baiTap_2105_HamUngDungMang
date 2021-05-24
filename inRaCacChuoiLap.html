@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[1,2,4,5,3,1,2,4,5,2,3,4,2,4,10];
+    for (let i = 0;i<a.length;i++){
+        for ( let j=i+1;j<a.length;j++){
+            let max=a.slice(i,j+1).length
+            if (a[i]!=a[j]){
+                if (kiemTra(a.slice(i,j))==0){
+                    document.write(a.slice(i,j+1)+" do dai la "+a.slice(i,j+1).length+"<br>")
+                }
+            }
+        }
+    }
+    function kiemTra(b){
+        let check = 0
+        for (let i = 0; i < b.length-1; i++) {
+            for (j=i+1;j<b.length;j++){
+                if (b[i]==b[j]){check = 1}
+            }
+        }
+        return check
+    }
+</script>
+</body>
+</html>
