@@ -6,13 +6,13 @@
 </head>
 <body>
 <script>
-    let a=[1,2,4,5,3,1,2,4,5,2,3,4,2,4,10];
-    for (let i = 0;i<a.length;i++){
-        for ( let j=i+1;j<a.length;j++){
-            let max=a.slice(i,j+1).length
+    let a=[1,2,4,5,4,3,1,2,4,5,2,3,4,2,4,10];
+    for (let i = 0;i<=a.length-1;i++){
+        for ( let j=i+1;j<=a.length;j++){
+            let max=2
             if (a[i]!=a[j]){
                 if (kiemTra(a.slice(i,j))==0){
-                    document.write(a.slice(i,j+1)+" do dai la "+a.slice(i,j+1).length+"<br>")
+                    document.write(a.slice(i,j)+"<br>")
                 }
             }
         }
